@@ -1,0 +1,47 @@
+name: dispatch-due-posts
+
+on:
+  schedule:
+    # A cada 15 minutos. Cron do GitHub nao e exato — pode atrasar 5-15 min em pico.
+    - cron: '*/15 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dispatch-due-posts
+  cancel-in-progress: false
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run dispatcher
+        env:
+          IG_TOKEN_STUDIO_WV2: ${{ secrets.IG_TOKEN_STUDIO_WV2 }}
+        run: node scripts/dispatch-due.js
+
+      - name: Commit queue updates
+        if: always()
+        run: |
+          git config user.name "publisher-bot"
+          git config user.email "publisher-bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain queue/)" ]; then
+            git add queue/
+            git commit -m "queue: dispatch run $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          else
+            echo "Nada pra commitar."
+          fi

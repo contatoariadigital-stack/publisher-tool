@@ -1,0 +1,18 @@
+{
+  "studio-wv2": {
+    "name": "Studio WV2",
+    "instagram_handle": "@studio_wv2trainer",
+    "page_id": "111586383946942",
+    "page_name": "WV2 Trainer",
+    "ig_user_id": "17841438591380428",
+    "ig_user_id_v2": "35281843848080601",
+    "ig_token_secret_name": "IG_TOKEN_STUDIO_WV2",
+    "default_user_tags": [
+      "wildner_oliveira",
+      "viniciusjresende",
+      "viniciusacarvalho88"
+    ],
+    "timezone": "America/Sao_Paulo",
+    "notes": "Cliente de criacao apenas (sem trafego). Pasta de artes em Studio wv2/2026/<Mes>/. Convencao DDMM.jpg. Fluxo via API IG nova (graph.instagram.com) com IGAA token. Token vem de GitHub Secret IG_TOKEN_STUDIO_WV2 no Actions, ou de .env local."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": "d08540fe",
+      "client": "studio-wv2",
+      "image": "assets/studio-wv2/2026-04/0804.jpg",
+      "caption": "A verdade que ninguém quer ouvir: motivação é montanha-russa. Hoje você acorda com vontade, amanhã não. 🎢\n\nQuem treina há 3 anos não tem mais motivação que você. Tem rotina. 💪\n\nResultado não vem de quem se sente inspirado todo dia. Vem de quem aparece mesmo nos dias ruins. De quem transformou treino em hábito.\n\nBora construir essa rotina junto? O Studio Personal WV2 te ajuda a sair da motivação e entrar na disciplina.\n\n#StudioPersonalWV2 #Disciplina #Rotina #PersonalTrainer #Lavras #VemTreinar",
+      "scheduled": "2026-04-08T20:00:00.000Z",
+      "status": "published",
+      "added_at": "2026-04-08T19:56:58.558Z",
+      "result": {
+        "media_id": "18121232437556007",
+        "container_id": "18101070437286380",
+        "image_url": "https://files.catbox.moe/frj46l.jpg",
+        "published_at": "2026-04-08T20:03:02.189Z"
+      }
+    },
+    {
+      "id": "829ec7eb",
+      "client": "studio-wv2",
+      "image": "assets/studio-wv2/2026-04/0804.jpg",
+      "caption": "A verdade que ninguém quer ouvir: motivação é montanha-russa. Hoje você acorda com vontade, amanhã não. 🎢\n\nQuem treina há 3 anos não tem mais motivação que você. Tem rotina. 💪\n\nResultado não vem de quem se sente inspirado todo dia. Vem de quem aparece mesmo nos dias ruins. De quem transformou treino em hábito.\n\nBora construir essa rotina junto? O Studio Personal WV2 te ajuda a sair da motivação e entrar na disciplina.\n\n#StudioPersonalWV2 #Disciplina #Rotina #PersonalTrainer #Lavras #VemTreinar",
+      "scheduled": "2026-04-08T20:05:00.000Z",
+      "status": "published",
+      "added_at": "2026-04-08T20:06:05.005Z",
+      "result": {
+        "media_id": "18078161153147907",
+        "container_id": "18101070566286380",
+        "image_url": "https://files.catbox.moe/frj46l.jpg",
+        "published_at": "2026-04-08T20:06:17.155Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "publisher-tool",
+  "version": "0.1.0",
+  "description": "Tool de agendamento de posts em Instagram via Meta Graph API. Usado pela skill /poster do time virtual do Gabriel. Sem dependencias externas (Node 18+ nativo).",
+  "type": "commonjs",
+  "scripts": {
+    "test-token": "node test-token.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
