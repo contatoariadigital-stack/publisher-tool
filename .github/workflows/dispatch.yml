@@ -1,10 +1,10 @@
 name: dispatch-due-posts
 
 on:
+  workflow_dispatch:
   schedule:
     # A cada 15 minutos. Cron do GitHub nao e exato — pode atrasar 5-15 min em pico.
-    - cron: '*/15 * * * *'
-  workflow_dispatch: {}
+    - cron: "*/15 * * * *"
 
 permissions:
   contents: write
