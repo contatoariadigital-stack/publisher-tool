@@ -1,15 +1,6 @@
 {
   "posts": [
     {
-      "id": "testga01",
-      "client": "studio-wv2",
-      "image": "assets/studio-wv2/2026-04/1004.jpg",
-      "caption": "Teste de agendamento via GitHub Actions ✅\n\nPost de validacao do fluxo automatico.",
-      "scheduled": "2026-04-11T12:00:00.000Z",
-      "status": "pending",
-      "added_at": "2026-04-11T11:45:00.000Z"
-    },
-    {
       "id": "8a9e25ac",
       "client": "studio-wv2",
       "image": "assets/studio-wv2/2026-04/1404.jpg",

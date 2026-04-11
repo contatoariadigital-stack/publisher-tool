@@ -54,6 +54,21 @@
       "status": "skipped_too_late",
       "added_at": "2026-04-08T20:26:47.724Z",
       "skipped_at": "2026-04-10T20:30:19.757Z"
+    },
+    {
+      "id": "testga01",
+      "client": "studio-wv2",
+      "image": "assets/studio-wv2/2026-04/1004.jpg",
+      "caption": "Teste de agendamento via GitHub Actions ✅\n\nPost de validacao do fluxo automatico.",
+      "scheduled": "2026-04-11T12:00:00.000Z",
+      "status": "published",
+      "added_at": "2026-04-11T11:45:00.000Z",
+      "result": {
+        "media_id": "17920391004340122",
+        "container_id": "18101361179286380",
+        "image_url": "https://files.catbox.moe/qv4uhg.jpg",
+        "published_at": "2026-04-11T12:00:25.203Z"
+      }
     }
   ]
 }
