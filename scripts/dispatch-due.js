@@ -38,22 +38,14 @@ function tokenEnvName(clientKey) {
   return 'IG_TOKEN_' + clientKey.toUpperCase().replace(/-/g, '_');
 }
 
-async function uploadImageToCatbox(absPath) {
-  const buffer = fs.readFileSync(absPath);
-  const filename = path.basename(absPath);
-  const ext = path.extname(filename).toLowerCase();
-  const mime = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp' }[ext];
-  if (!mime) throw new Error(`Formato nao suportado: ${ext}`);
-
-  const blob = new Blob([buffer], { type: mime });
-  const fd = new FormData();
-  fd.append('reqtype', 'fileupload');
-  fd.append('fileToUpload', blob, filename);
-
-  const res = await fetch('https://catbox.moe/user/api.php', { method: 'POST', body: fd });
-  const text = (await res.text()).trim();
-  if (!text.startsWith('https://')) throw new Error(`Catbox falhou: ${text}`);
-  return text;
+// Repo publico — serve a imagem direto via raw.githubusercontent.com.
+// A imagem ja esta commitada em assets/ antes do dispatcher rodar (add-to-queue
+// + git push pelo Gabriel), entao aqui so montamos a URL publica.
+function buildRawImageUrl(relPath) {
+  const repo = process.env.GITHUB_REPOSITORY || 'contatoariadigital-stack/publisher-tool';
+  const branch = process.env.GITHUB_REF_NAME || 'main';
+  const normalized = relPath.split(path.sep).join('/');
+  return `https://raw.githubusercontent.com/${repo}/${branch}/${encodeURI(normalized)}`;
 }
 
 async function igPost(igUserId, endpoint, params, token) {
@@ -111,9 +103,8 @@ async function publishPost(post, client) {
   const absImage = path.join(ROOT, post.image);
   if (!fs.existsSync(absImage)) throw new Error(`Imagem nao encontrada: ${post.image}`);
 
-  console.log(`  upload imagem...`);
-  const imageUrl = await uploadImageToCatbox(absImage);
-  console.log(`    ${imageUrl}`);
+  const imageUrl = buildRawImageUrl(post.image);
+  console.log(`  image_url: ${imageUrl}`);
 
   // Monta user_tags em posicoes distribuidas (mesma logica do schedule-post.js antigo)
   const tagsList = client.default_user_tags || [];
