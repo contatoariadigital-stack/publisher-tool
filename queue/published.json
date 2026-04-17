@@ -79,6 +79,21 @@
       "status": "skipped_too_late",
       "added_at": "2026-04-08T20:26:47.727Z",
       "skipped_at": "2026-04-14T12:30:16.167Z"
+    },
+    {
+      "id": "c2d696ae",
+      "client": "studio-wv2",
+      "image": "assets/studio-wv2/2026-04/1704.jpg",
+      "caption": "O que muda nos primeiros 60 dias de treino? 📅\n\nMais do que você imagina:\n\n✔️ Semana 1-2: seu corpo aprende. Os movimentos parecem estranhos, mas seu sistema neuromuscular já está se adaptando.\n\n✔️ Semana 3-4: a disposição muda. Você acorda mais leve, dorme melhor e sente menos cansaço durante o dia.\n\n✔️ Semana 5-6: a força aparece. Pesos que antes pareciam impossíveis viram a sua nova base.\n\n✔️ Semana 7-8: a mudança no espelho. Sutil, mas real. Postura, definição, presença.\n\nE o melhor: nesse momento, treinar deixa de ser obrigação e vira parte de quem você é. 💚\n\nQuer começar essa jornada com acompanhamento de quem entende? O Studio Personal WV2 te leva desde o primeiro treino até o resultado.\n\n#60Dias #StudioPersonalWV2 #InicioDoTreino #Resultado #PersonalTrainer #Lavras",
+      "scheduled": "2026-04-17T10:30:00.000Z",
+      "status": "published",
+      "added_at": "2026-04-08T20:26:47.731Z",
+      "result": {
+        "media_id": "17958092736084299",
+        "container_id": "18101991689286380",
+        "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-04/1704.jpg",
+        "published_at": "2026-04-17T10:30:27.031Z"
+      }
     }
   ]
 }
