@@ -94,6 +94,21 @@
         "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-04/1704.jpg",
         "published_at": "2026-04-17T10:30:27.031Z"
       }
+    },
+    {
+      "id": "8a9e25ac-r",
+      "client": "studio-wv2",
+      "image": "assets/studio-wv2/2026-04/1404.jpg",
+      "caption": "ATLETA HÍBRIDO 🏃‍♂️💪\n\nNão é só cardio. Não é só musculação. É os dois — e bem feitos.\n\nO atleta híbrido treina força, resistência, agilidade e mobilidade. Corpo preparado pra qualquer desafio: seja correr 10km, levantar pesado, ou só subir aquela escada sem perder o fôlego.\n\nNão é sobre ser especialista em uma coisa. É sobre estar pronto pra tudo.\n\nQuer treinar como atleta? No Studio Personal WV2 a gente monta o seu programa híbrido sob medida. 🚀\n\n#AtletaHibrido #StudioPersonalWV2 #Funcional #Forca #Resistencia #PersonalTrainer #Lavras",
+      "scheduled": "2026-04-18T10:00:00.000Z",
+      "status": "published",
+      "added_at": "2026-04-17T00:00:00.000Z",
+      "result": {
+        "media_id": "18082343714093323",
+        "container_id": "18102107546286380",
+        "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-04/1404.jpg",
+        "published_at": "2026-04-18T10:00:26.632Z"
+      }
     }
   ]
 }
