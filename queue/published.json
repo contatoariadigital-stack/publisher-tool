@@ -109,6 +109,21 @@
         "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-04/1404.jpg",
         "published_at": "2026-04-18T10:00:26.632Z"
       }
+    },
+    {
+      "id": "75bded3b",
+      "client": "studio-wv2",
+      "image": "assets/studio-wv2/2026-04/1904.jpg",
+      "caption": "DOMINGO também é dia. 💪\n\nEnquanto o resto descansa, você constrói.\n\nNão precisa ser todo domingo. Mas naquele dia em que você escolhe aparecer no treino quando ninguém mais escolhe — é ali que a diferença acontece. É ali que você sai da média.\n\nBora? O Studio Personal WV2 tá aberto pra quem não espera segunda-feira pra começar de novo. 🚀\n\n#DomingoDeTreino #StudioPersonalWV2 #Disciplina #VemTreinar #Lavras #WV2Trainer",
+      "scheduled": "2026-04-19T10:30:00.000Z",
+      "status": "published",
+      "added_at": "2026-04-08T20:26:47.733Z",
+      "result": {
+        "media_id": "18116719846661069",
+        "container_id": "18102227126286380",
+        "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-04/1904.jpg",
+        "published_at": "2026-04-19T10:30:23.504Z"
+      }
     }
   ]
 }
