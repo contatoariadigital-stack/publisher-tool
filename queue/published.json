@@ -124,6 +124,21 @@
         "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-04/1904.jpg",
         "published_at": "2026-04-19T10:30:23.504Z"
       }
+    },
+    {
+      "id": "4cdee236",
+      "client": "studio-wv2",
+      "image": "assets/studio-wv2/2026-04/2104.jpg",
+      "caption": "LEMBRE-SE: não pule o alongamento. 🧘‍♀️\n\nSabe aqueles 5 minutos no fim do treino que você sempre pula porque \"tá com pressa\"? Pois é — seu corpo vai cobrar depois.\n\nO alongamento previne lesão, melhora a sua mobilidade e acelera a sua recuperação. Ou seja: o treino de amanhã fica melhor por causa do que você faz hoje.\n\nInvestir 5 minutos no alongamento é mais barato do que 6 meses se recuperando de uma lesão. 🤝\n\nNo Studio Personal WV2, alongamento faz parte do treino. Não é luxo, é estratégia.\n\n#NãoPuleOAlongamento #Mobilidade #StudioPersonalWV2 #PrevençãoDeLesão #PersonalTrainer #Lavras",
+      "scheduled": "2026-04-21T10:30:00.000Z",
+      "status": "published",
+      "added_at": "2026-04-08T20:26:47.737Z",
+      "result": {
+        "media_id": "18092361118898222",
+        "container_id": "18102448328286380",
+        "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-04/2104.jpg",
+        "published_at": "2026-04-21T10:30:27.164Z"
+      }
     }
   ]
 }
