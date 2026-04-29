@@ -184,6 +184,21 @@
         "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-04/2704.jpg",
         "published_at": "2026-04-27T14:30:24.692Z"
       }
+    },
+    {
+      "id": "896050e9",
+      "client": "studio-wv2",
+      "image": "assets/studio-wv2/2026-04/2904.jpg",
+      "caption": "ATENÇÃO! 🔔\n\nInformamos que não haverá expediente nesta sexta-feira (01/05), devido ao feriado do Dia do Trabalhador.\n\nRetornaremos na segunda-feira (04/05) com horário normal!\n\nAproveita pra descansar, recarregar e voltar com tudo na semana que vem. 💪\n\nQualquer dúvida, é só chamar a gente no direct.\n\n#AvisoImportante #StudioPersonalWV2 #DiaDoTrabalhador #StudioWV2 #Lavras",
+      "scheduled": "2026-04-29T20:30:00.000Z",
+      "status": "published",
+      "added_at": "2026-04-08T20:26:47.749Z",
+      "result": {
+        "media_id": "18076695095550508",
+        "container_id": "18103445282286380",
+        "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-04/2904.jpg",
+        "published_at": "2026-04-29T20:30:24.870Z"
+      }
     }
   ]
 }
