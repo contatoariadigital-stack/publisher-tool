@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     # A cada 15 minutos. Cron do GitHub nao e exato — pode atrasar 5-15 min em pico.
-    - cron: "*/15 * * * *"
+    - cron: "7,22,37,52 * * * *"
 
 permissions:
   contents: write

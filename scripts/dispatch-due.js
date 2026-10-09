@@ -27,7 +27,7 @@ const IG_API_BASE = 'https://graph.instagram.com/v21.0';
 const FB_API_BASE = 'https://graph.facebook.com/v21.0';
 
 // Quanto tempo no passado a gente ainda aceita postar (evita catch-up catastrofico)
-const MAX_LATE_MINUTES = 120;
+const MAX_LATE_MINUTES = 720; // 12h: o cron do GitHub dispara esporadico; melhor atrasar que pular
 
 function loadJson(p, fallback) {
   if (!fs.existsSync(p)) return fallback;
