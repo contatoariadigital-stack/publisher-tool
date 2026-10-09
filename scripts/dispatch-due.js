@@ -29,8 +29,8 @@ if (!process.env.GITHUB_ACTIONS) {
   const logFile = path.join(ROOT, 'state', 'local-dispatch.log');
   fs.mkdirSync(path.dirname(logFile), { recursive: true });
   const origLog = console.log, origErr = console.error;
-  const w = (lvl, a) => { try { fs.appendFileSync(logFile, new Date().toISOString() + ' ' + lvl + ' ' + a.map(x => typeof x === 'string' ? x : JSON.stringify(x)).join(' ') + '
-'); } catch (_) {} };
+  const EOL = String.fromCharCode(10);
+  const w = (lvl, a) => { try { fs.appendFileSync(logFile, new Date().toISOString() + ' ' + lvl + ' ' + a.map(x => typeof x === 'string' ? x : JSON.stringify(x)).join(' ') + EOL); } catch (_) {} };
   console.log = (...a) => { origLog(...a); w('INFO', a); };
   console.error = (...a) => { origErr(...a); w('ERR', a); };
   console.log('--- run local');
