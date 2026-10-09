@@ -23,6 +23,18 @@ const { loadEnv } = require('../lib/env');
 loadEnv();
 
 const ROOT = path.resolve(__dirname, '..');
+
+// Fora do GitHub Actions (Task Scheduler local) espelha o console em state/local-dispatch.log
+if (!process.env.GITHUB_ACTIONS) {
+  const logFile = path.join(ROOT, 'state', 'local-dispatch.log');
+  fs.mkdirSync(path.dirname(logFile), { recursive: true });
+  const origLog = console.log, origErr = console.error;
+  const w = (lvl, a) => { try { fs.appendFileSync(logFile, new Date().toISOString() + ' ' + lvl + ' ' + a.map(x => typeof x === 'string' ? x : JSON.stringify(x)).join(' ') + '
+'); } catch (_) {} };
+  console.log = (...a) => { origLog(...a); w('INFO', a); };
+  console.error = (...a) => { origErr(...a); w('ERR', a); };
+  console.log('--- run local');
+}
 const IG_API_BASE = 'https://graph.instagram.com/v21.0';
 const FB_API_BASE = 'https://graph.facebook.com/v21.0';
 
