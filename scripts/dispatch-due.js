@@ -5,8 +5,12 @@
 // Uso (Actions ou local):
 //   node scripts/dispatch-due.js
 //
-// Variaveis de ambiente esperadas:
-//   IG_TOKEN_<CLIENT_KEY_UPPER>  (ex: IG_TOKEN_STUDIO_WV2)
+// Variaveis de ambiente esperadas (uma das duas por cliente):
+//   FB_PAGE_TOKEN_<CLIENT_KEY_UPPER> (ex: FB_PAGE_TOKEN_STUDIO_WV2) -> modo Facebook Login:
+//       graph.facebook.com + client.ig_user_id (token de pagina derivado de user token
+//       long-lived, nao expira). Preferido desde 09/10/2026.
+//   IG_TOKEN_<CLIENT_KEY_UPPER>      (ex: IG_TOKEN_STUDIO_WV2) -> modo Instagram Login:
+//       graph.instagram.com + client.ig_user_id_v2 (vence em 60 dias).
 //
 // Saida:
 //   - Atualiza queue/pending.json (remove posts publicados)
@@ -20,6 +24,7 @@ loadEnv();
 
 const ROOT = path.resolve(__dirname, '..');
 const IG_API_BASE = 'https://graph.instagram.com/v21.0';
+const FB_API_BASE = 'https://graph.facebook.com/v21.0';
 
 // Quanto tempo no passado a gente ainda aceita postar (evita catch-up catastrofico)
 const MAX_LATE_MINUTES = 120;
@@ -38,6 +43,25 @@ function tokenEnvName(clientKey) {
   return 'IG_TOKEN_' + clientKey.toUpperCase().replace(/-/g, '_');
 }
 
+function fbTokenEnvName(clientKey) {
+  return 'FB_PAGE_TOKEN_' + clientKey.toUpperCase().replace(/-/g, '_');
+}
+
+// Decide modo e credenciais do cliente. FB (page token) tem prioridade.
+function resolveAuth(post, client) {
+  const fbName = client.fb_token_secret_name || fbTokenEnvName(post.client);
+  const fbToken = process.env[fbName];
+  if (fbToken) {
+    if (!client.ig_user_id) throw new Error(`Cliente ${post.client} sem ig_user_id (modo FB)`);
+    return { mode: 'fb', base: FB_API_BASE, token: fbToken, igUserId: client.ig_user_id };
+  }
+  const igName = client.ig_token_secret_name || tokenEnvName(post.client);
+  const igToken = process.env[igName];
+  if (!igToken) throw new Error(`Token ausente em env: ${fbName} ou ${igName}`);
+  if (!client.ig_user_id_v2) throw new Error(`Cliente ${post.client} sem ig_user_id_v2 configurado (modo IG)`);
+  return { mode: 'ig', base: IG_API_BASE, token: igToken, igUserId: client.ig_user_id_v2 };
+}
+
 // Repo publico — serve a imagem direto via raw.githubusercontent.com.
 // A imagem ja esta commitada em assets/ antes do dispatcher rodar (add-to-queue
 // + git push pelo Gabriel), entao aqui so montamos a URL publica.
@@ -48,8 +72,8 @@ function buildRawImageUrl(relPath) {
   return `https://raw.githubusercontent.com/${repo}/${branch}/${encodeURI(normalized)}`;
 }
 
-async function igPost(igUserId, endpoint, params, token) {
-  const url = `${IG_API_BASE}/${igUserId}/${endpoint}`;
+async function igPost(igUserId, endpoint, params, token, base = IG_API_BASE) {
+  const url = `${base}/${igUserId}/${endpoint}`;
   const body = new URLSearchParams();
   for (const [k, v] of Object.entries(params)) body.set(k, String(v));
   body.set('access_token', token);
@@ -66,8 +90,8 @@ async function igPost(igUserId, endpoint, params, token) {
   return json;
 }
 
-async function igGet(node, params, token) {
-  const url = new URL(`${IG_API_BASE}/${node}`);
+async function igGet(node, params, token, base = IG_API_BASE) {
+  const url = new URL(`${base}/${node}`);
   for (const [k, v] of Object.entries(params)) url.searchParams.set(k, String(v));
   url.searchParams.set('access_token', token);
   const res = await fetch(url.toString());
@@ -78,10 +102,10 @@ async function igGet(node, params, token) {
   return json;
 }
 
-async function waitContainerReady(containerId, token, { maxWaitMs = 60000, intervalMs = 2000 } = {}) {
+async function waitContainerReady(containerId, token, { maxWaitMs = 60000, intervalMs = 2000, base = IG_API_BASE } = {}) {
   const deadline = Date.now() + maxWaitMs;
   while (Date.now() < deadline) {
-    const info = await igGet(containerId, { fields: 'status_code' }, token);
+    const info = await igGet(containerId, { fields: 'status_code' }, token, base);
     if (info.status_code === 'FINISHED') return;
     if (info.status_code === 'ERROR' || info.status_code === 'EXPIRED') {
       throw new Error(`Container ${containerId} status ${info.status_code}`);
@@ -92,13 +116,9 @@ async function waitContainerReady(containerId, token, { maxWaitMs = 60000, inter
   throw new Error(`Container ${containerId} nao ficou pronto em ${maxWaitMs}ms`);
 }
 
-async function publishPost(post, client) {
-  const tokenName = client.ig_token_secret_name || tokenEnvName(post.client);
-  const token = process.env[tokenName];
-  if (!token) throw new Error(`Token ausente em env: ${tokenName}`);
-
-  const igUserId = client.ig_user_id_v2;
-  if (!igUserId) throw new Error(`Cliente ${post.client} sem ig_user_id_v2 configurado`);
+async function publishPost(post, client, { dryRun = false } = {}) {
+  const { mode, base, token, igUserId } = resolveAuth(post, client);
+  console.log(`  modo: ${mode} (${base})`);
 
   const absImage = path.join(ROOT, post.image);
   if (!fs.existsSync(absImage)) throw new Error(`Imagem nao encontrada: ${post.image}`);
@@ -122,17 +142,22 @@ async function publishPost(post, client) {
   if (userTags.length > 0) {
     containerParams.user_tags = JSON.stringify(userTags);
   }
-  const container = await igPost(igUserId, 'media', containerParams, token);
+  const container = await igPost(igUserId, 'media', containerParams, token, base);
   console.log(`    container ${container.id}`);
 
   console.log(`  aguarda container ficar pronto...`);
-  await waitContainerReady(container.id, token);
+  await waitContainerReady(container.id, token, { base });
   console.log(`    pronto`);
+
+  if (dryRun) {
+    console.log(`  DRY-RUN: container OK, NAO publicado (expira sozinho em 24h)`);
+    return { dry_run: true, container_id: container.id, image_url: imageUrl };
+  }
 
   console.log(`  publica...`);
   const publish = await igPost(igUserId, 'media_publish', {
     creation_id: container.id
-  }, token);
+  }, token, base);
   console.log(`    media ${publish.id}`);
 
   return {
@@ -146,6 +171,21 @@ async function publishPost(post, client) {
 async function main() {
   const clients = loadJson(path.join(ROOT, 'clients.json'), {});
   const queuePath = path.join(ROOT, 'queue', 'pending.json');
+
+  // --test=<id>: valida token + imagem + container do post <id> SEM publicar e SEM mexer na fila.
+  const testArg = process.argv.find(a => a.startsWith('--test='));
+  if (testArg) {
+    const id = testArg.split('=')[1];
+    const q = loadJson(queuePath, { posts: [] });
+    const post = (q.posts || []).find(p => p.id === id);
+    if (!post) throw new Error(`Post ${id} nao esta em pending.json`);
+    const client = clients[post.client];
+    if (!client) throw new Error(`Cliente ${post.client} nao existe em clients.json`);
+    console.log(`TESTE [${post.id}] ${path.basename(post.image)}`);
+    const r = await publishPost(post, client, { dryRun: true });
+    console.log(JSON.stringify(r));
+    return;
+  }
   const publishedPath = path.join(ROOT, 'queue', 'published.json');
 
   const queue = loadJson(queuePath, { posts: [] });

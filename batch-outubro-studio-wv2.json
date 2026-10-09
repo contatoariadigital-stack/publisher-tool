@@ -1,76 +1,45 @@
 {
+  "client": "studio-wv2",
   "posts": [
     {
-      "id": "ba6c18df",
-      "client": "studio-wv2",
-      "image": "assets/studio-wv2/2026-10/1010.jpg",
-      "caption": "Não diga às pessoas os seus planos. Mostre a elas os seus resultados. 🔥\n\nPlano todo mundo tem. \"Semana que vem eu começo\", \"depois das festas\", \"quando a rotina acalmar\". O que muda a história é o treino feito, não o treino prometido.\n\nAqui no studio a gente não cobra promessa. A gente marca horário e acompanha cada sessão até o resultado aparecer.\n\nQuer começar de verdade? Chama no direct e agenda sua aula experimental. 📩\n\n#studio_wv2trainer #resultados #treinopersonalizado #personaltrainer #lavras",
-      "scheduled": "2026-10-10T10:30:00.000Z",
-      "status": "pending",
-      "added_at": "2026-10-09T09:54:36.457Z"
-    },
-    {
-      "id": "9b2d6095",
-      "client": "studio-wv2",
-      "image": "assets/studio-wv2/2026-10/0810.jpg",
+      "image": "C:\\Users\\gabri\\Desktop\\Gabriel Ramos\\Materiais de Criação\\Studio wv2\\2026\\Outubro\\0810.jpg",
       "caption": "O corpo alcança o que a mente acredita. 🧠💪\n\nAntes de qualquer carga na barra, o treino começa na decisão de aparecer. Quem acredita que consegue, aparece. Quem aparece, evolui.\n\nNão é sobre motivação todo dia. É sobre acreditar o suficiente pra vir mesmo no dia que não dá vontade.\n\nSalva esse post pro dia que a cabeça pesar. 📌\n\n#studio_wv2trainer #treino #mentalidade #personaltrainer #lavras",
-      "scheduled": "2026-10-11T12:00:00.000Z",
-      "status": "pending",
-      "added_at": "2026-10-09T09:54:36.454Z"
+      "schedule": "2026-10-11T09:00:00-03:00"
     },
     {
-      "id": "5ea0df0a",
-      "client": "studio-wv2",
-      "image": "assets/studio-wv2/2026-10/1210.jpg",
+      "image": "C:\\Users\\gabri\\Desktop\\Gabriel Ramos\\Materiais de Criação\\Studio wv2\\2026\\Outubro\\1010.jpg",
+      "caption": "Não diga às pessoas os seus planos. Mostre a elas os seus resultados. 🔥\n\nPlano todo mundo tem. \"Semana que vem eu começo\", \"depois das festas\", \"quando a rotina acalmar\". O que muda a história é o treino feito, não o treino prometido.\n\nAqui no studio a gente não cobra promessa. A gente marca horário e acompanha cada sessão até o resultado aparecer.\n\nQuer começar de verdade? Chama no direct e agenda sua aula experimental. 📩\n\n#studio_wv2trainer #resultados #treinopersonalizado #personaltrainer #lavras",
+      "schedule": "2026-10-10T07:30:00-03:00"
+    },
+    {
+      "image": "C:\\Users\\gabri\\Desktop\\Gabriel Ramos\\Materiais de Criação\\Studio wv2\\2026\\Outubro\\1210.jpg",
       "caption": "Segunda-feira é dia de recomeçar. ☀️\n\nE aí, qual vai ser a desculpa pra não começar a treinar hoje? Frio, chuva, cansaço, feriado... A gente já ouviu todas. E a gente sabe que depois do treino nenhuma delas faz sentido.\n\nBora abrir a semana do jeito certo. O studio tá aberto e o prof tá te esperando. 💪\n\nComenta aqui: treino de hoje já foi ou ainda vai? 👇\n\n#studio_wv2trainer #segundafeira #bora #treino #lavras",
-      "scheduled": "2026-10-12T10:30:00.000Z",
-      "status": "pending",
-      "added_at": "2026-10-09T09:54:36.460Z"
+      "schedule": "2026-10-12T07:30:00-03:00"
     },
     {
-      "id": "9d7f8ed4",
-      "client": "studio-wv2",
-      "image": "assets/studio-wv2/2026-10/1410.jpg",
+      "image": "C:\\Users\\gabri\\Desktop\\Gabriel Ramos\\Materiais de Criação\\Studio wv2\\2026\\Outubro\\1410.jpg",
       "caption": "Outubro Rosa. Mês de prevenção ao câncer de mama. 🎀\n\nFique atenta aos sinais, prevenção é tudo. O autoexame leva poucos minutos e a mamografia em dia salva vidas. Se você tem mais de 40 anos ou histórico na família, não adia: marca sua consulta.\n\nE uma coisa que a gente precisa dizer: atividade física regular reduz o risco de câncer de mama. Cuidar do corpo também é prevenção.\n\nMarca uma amiga que precisa ler isso. 💗\n\n#studio_wv2trainer #outubrorosa #prevencao #saudedamulher #lavras",
-      "scheduled": "2026-10-14T10:30:00.000Z",
-      "status": "pending",
-      "added_at": "2026-10-09T09:54:36.462Z"
+      "schedule": "2026-10-14T07:30:00-03:00"
     },
     {
-      "id": "2a98d687",
-      "client": "studio-wv2",
-      "image": "assets/studio-wv2/2026-10/1610.jpg",
+      "image": "C:\\Users\\gabri\\Desktop\\Gabriel Ramos\\Materiais de Criação\\Studio wv2\\2026\\Outubro\\1610.jpg",
       "caption": "Prevenir é cuidar. 🎀\n\nAutoexame em dia, consulta marcada. Parece simples, mas é exatamente isso que faz a diferença: o câncer de mama descoberto cedo tem muito mais chance de cura.\n\nCuide de você com o mesmo carinho que você cuida de todo mundo. Esse mês é o lembrete, mas a prevenção vale o ano inteiro.\n\nToda mulher que treina aqui merece esse recado. Compartilha. 💗\n\n#studio_wv2trainer #outubrorosa #autoexame #cuidedevoce #lavras",
-      "scheduled": "2026-10-16T10:30:00.000Z",
-      "status": "pending",
-      "added_at": "2026-10-09T09:54:36.465Z"
+      "schedule": "2026-10-16T07:30:00-03:00"
     },
     {
-      "id": "f8c29631",
-      "client": "studio-wv2",
-      "image": "assets/studio-wv2/2026-10/2010.jpg",
+      "image": "C:\\Users\\gabri\\Desktop\\Gabriel Ramos\\Materiais de Criação\\Studio wv2\\2026\\Outubro\\2010.jpg",
       "caption": "Motivação acaba. Horário marcado fica. ⏰\n\nQuem tem hora marcada não depende de vontade, depende de compromisso. É por isso que no studio o seu treino tem dia, hora e prof esperando. Não tem \"vou ver se dá\".\n\nA diferença entre quem evolui e quem sempre recomeça não é força de vontade. É agenda. 📅\n\nQuer o seu horário fixo? Chama no direct que a gente encaixa você. 📩\n\n#studio_wv2trainer #rotina #compromisso #personaltrainer #lavras",
-      "scheduled": "2026-10-20T10:30:00.000Z",
-      "status": "pending",
-      "added_at": "2026-10-09T09:54:36.467Z"
+      "schedule": "2026-10-20T07:30:00-03:00"
     },
     {
-      "id": "8fd92697",
-      "client": "studio-wv2",
-      "image": "assets/studio-wv2/2026-10/2310.jpg",
+      "image": "C:\\Users\\gabri\\Desktop\\Gabriel Ramos\\Materiais de Criação\\Studio wv2\\2026\\Outubro\\2310.jpg",
       "caption": "Você sabia? Apenas 30 minutos de treino por dia já melhoram seu sono, sua energia e seu humor. 💡\n\nNão precisa de 2 horas na academia. Precisa de constância. Meia hora bem feita, com o prof do lado, vale mais que um treino de 2 horas feito de vez em quando.\n\nEntão começa hoje. O studio tem turma pequena, treino personalizado e horário que cabe na sua rotina. 💪\n\nAgenda sua aula experimental pelo direct. 📩\n\n#studio_wv2trainer #30minutos #saude #treino #lavras",
-      "scheduled": "2026-10-23T10:30:00.000Z",
-      "status": "pending",
-      "added_at": "2026-10-09T09:54:36.470Z"
+      "schedule": "2026-10-23T07:30:00-03:00"
     },
     {
-      "id": "2dfe2ad8",
-      "client": "studio-wv2",
-      "image": "assets/studio-wv2/2026-10/3010.jpg",
+      "image": "C:\\Users\\gabri\\Desktop\\Gabriel Ramos\\Materiais de Criação\\Studio wv2\\2026\\Outubro\\3010.jpg",
       "caption": "SEXTOU! 🎉\n\nE o treino de hoje? Já foi? Fecha a semana treinando e curte o fim de semana leve, com a consciência tranquila e o corpo agradecendo.\n\nSexta não é dia de pular treino. É dia de fechar a semana com chave de ouro. 🔑💪\n\nMarca o parceiro de treino que precisa desse lembrete. 👇\n\n#studio_wv2trainer #sextou #bora #treino #lavras",
-      "scheduled": "2026-10-30T10:30:00.000Z",
-      "status": "pending",
-      "added_at": "2026-10-09T09:54:36.472Z"
+      "schedule": "2026-10-30T07:30:00-03:00"
     }
   ]
 }

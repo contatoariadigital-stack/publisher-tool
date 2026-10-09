@@ -30,6 +30,7 @@ jobs:
 
       - name: Run dispatcher
         env:
+          FB_PAGE_TOKEN_STUDIO_WV2: ${{ secrets.FB_PAGE_TOKEN_STUDIO_WV2 }}
           IG_TOKEN_STUDIO_WV2: ${{ secrets.IG_TOKEN_STUDIO_WV2 }}
         run: node scripts/dispatch-due.js
 

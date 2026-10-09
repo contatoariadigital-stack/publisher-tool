@@ -104,7 +104,16 @@ Formato do batch JSON:
 - Suporte a **Reels** (vai precisar `media_type=REELS` + cover image)
 - `refresh-token.js` — renovar long-lived token automaticamente antes de expirar
 
-## Token
+## Token (atualizado 09/10/2026)
+
+Modo preferido: **FB_PAGE_TOKEN_<CLIENTE>** (token de pagina do Facebook, derivado do user token
+long-lived do meta-ads-tool, que nao expira). O dispatcher usa graph.facebook.com + `ig_user_id`.
+Pra (re)gerar e copiar pro clipboard sem imprimir: `node scripts/page-token-to-clipboard.js studio-wv2`
+e colar em GitHub > repo publisher-tool > Settings > Secrets and variables > Actions > `FB_PAGE_TOKEN_STUDIO_WV2`.
+Se FB_PAGE_TOKEN nao existir, cai no modo antigo (IG_TOKEN_<CLIENTE>, Instagram Login, vence em 60 dias).
+Teste sem publicar: `node scripts/dispatch-due.js --test=<id do post em pending.json>`.
+
+## Token (modo antigo, Instagram Login)
 
 O token long-lived do user dura 60 dias. Page tokens derivados de long-lived user tokens **nao expiram** (no caso normal). O page token de cada cliente esta no `clients.json`. Se algum dia der erro de token expirado, rode:
 
