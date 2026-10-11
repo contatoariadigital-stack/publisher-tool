@@ -214,6 +214,21 @@
         "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-10/1010.jpg",
         "published_at": "2026-10-09T21:48:26.032Z"
       }
+    },
+    {
+      "id": "9b2d6095",
+      "client": "studio-wv2",
+      "image": "assets/studio-wv2/2026-10/0810.jpg",
+      "caption": "O corpo alcança o que a mente acredita. 🧠💪\n\nAntes de qualquer carga na barra, o treino começa na decisão de aparecer. Quem acredita que consegue, aparece. Quem aparece, evolui.\n\nNão é sobre motivação todo dia. É sobre acreditar o suficiente pra vir mesmo no dia que não dá vontade.\n\nSalva esse post pro dia que a cabeça pesar. 📌\n\n#studio_wv2trainer #treino #mentalidade #personaltrainer #lavras",
+      "scheduled": "2026-10-11T12:00:00.000Z",
+      "status": "published",
+      "added_at": "2026-10-09T09:54:36.454Z",
+      "result": {
+        "media_id": "17874994773587664",
+        "container_id": "18123329666286380",
+        "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-10/0810.jpg",
+        "published_at": "2026-10-11T14:10:48.815Z"
+      }
     }
   ]
 }
