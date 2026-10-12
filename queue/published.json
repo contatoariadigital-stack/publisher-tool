@@ -229,6 +229,21 @@
         "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-10/0810.jpg",
         "published_at": "2026-10-11T14:10:48.815Z"
       }
+    },
+    {
+      "id": "5ea0df0a",
+      "client": "studio-wv2",
+      "image": "assets/studio-wv2/2026-10/1210.jpg",
+      "caption": "Segunda-feira é dia de recomeçar. ☀️\n\nE aí, qual vai ser a desculpa pra não começar a treinar hoje? Frio, chuva, cansaço, feriado... A gente já ouviu todas. E a gente sabe que depois do treino nenhuma delas faz sentido.\n\nBora abrir a semana do jeito certo. O studio tá aberto e o prof tá te esperando. 💪\n\nComenta aqui: treino de hoje já foi ou ainda vai? 👇\n\n#studio_wv2trainer #segundafeira #bora #treino #lavras",
+      "scheduled": "2026-10-12T10:30:00.000Z",
+      "status": "published",
+      "added_at": "2026-10-09T09:54:36.460Z",
+      "result": {
+        "media_id": "18131090155703136",
+        "container_id": "18123480584286380",
+        "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-10/1210.jpg",
+        "published_at": "2026-10-12T17:48:54.037Z"
+      }
     }
   ]
 }
