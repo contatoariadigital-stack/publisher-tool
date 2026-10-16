@@ -259,6 +259,21 @@
         "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-10/1410.jpg",
         "published_at": "2026-10-14T12:28:23.313Z"
       }
+    },
+    {
+      "id": "2a98d687",
+      "client": "studio-wv2",
+      "image": "assets/studio-wv2/2026-10/1610.jpg",
+      "caption": "Prevenir é cuidar. 🎀\n\nAutoexame em dia, consulta marcada. Parece simples, mas é exatamente isso que faz a diferença: o câncer de mama descoberto cedo tem muito mais chance de cura.\n\nCuide de você com o mesmo carinho que você cuida de todo mundo. Esse mês é o lembrete, mas a prevenção vale o ano inteiro.\n\nToda mulher que treina aqui merece esse recado. Compartilha. 💗\n\n#studio_wv2trainer #outubrorosa #autoexame #cuidedevoce #lavras",
+      "scheduled": "2026-10-16T10:30:00.000Z",
+      "status": "published",
+      "added_at": "2026-10-09T09:54:36.465Z",
+      "result": {
+        "media_id": "18130831883503902",
+        "container_id": "18123931328286380",
+        "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-10/1610.jpg",
+        "published_at": "2026-10-16T11:00:16.504Z"
+      }
     }
   ]
 }
