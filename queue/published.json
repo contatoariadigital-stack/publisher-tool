@@ -289,6 +289,21 @@
         "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-10/2010.jpg",
         "published_at": "2026-10-20T10:34:41.859Z"
       }
+    },
+    {
+      "id": "8fd92697",
+      "client": "studio-wv2",
+      "image": "assets/studio-wv2/2026-10/2310.jpg",
+      "caption": "Você sabia? Apenas 30 minutos de treino por dia já melhoram seu sono, sua energia e seu humor. 💡\n\nNão precisa de 2 horas na academia. Precisa de constância. Meia hora bem feita, com o prof do lado, vale mais que um treino de 2 horas feito de vez em quando.\n\nEntão começa hoje. O studio tem turma pequena, treino personalizado e horário que cabe na sua rotina. 💪\n\nAgenda sua aula experimental pelo direct. 📩\n\n#studio_wv2trainer #30minutos #saude #treino #lavras",
+      "scheduled": "2026-10-23T10:30:00.000Z",
+      "status": "published",
+      "added_at": "2026-10-09T09:54:36.470Z",
+      "result": {
+        "media_id": "18152795521493768",
+        "container_id": "18124869791286380",
+        "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-10/2310.jpg",
+        "published_at": "2026-10-23T11:28:53.089Z"
+      }
     }
   ]
 }
