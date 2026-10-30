@@ -304,6 +304,21 @@
         "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-10/2310.jpg",
         "published_at": "2026-10-23T11:28:53.089Z"
       }
+    },
+    {
+      "id": "2dfe2ad8",
+      "client": "studio-wv2",
+      "image": "assets/studio-wv2/2026-10/3010.jpg",
+      "caption": "SEXTOU! 🎉\n\nE o treino de hoje? Já foi? Fecha a semana treinando e curte o fim de semana leve, com a consciência tranquila e o corpo agradecendo.\n\nSexta não é dia de pular treino. É dia de fechar a semana com chave de ouro. 🔑💪\n\nMarca o parceiro de treino que precisa desse lembrete. 👇\n\n#studio_wv2trainer #sextou #bora #treino #lavras",
+      "scheduled": "2026-10-30T10:30:00.000Z",
+      "status": "published",
+      "added_at": "2026-10-09T09:54:36.472Z",
+      "result": {
+        "media_id": "17924500911223354",
+        "container_id": "18125986862286380",
+        "image_url": "https://raw.githubusercontent.com/contatoariadigital-stack/publisher-tool/main/assets/studio-wv2/2026-10/3010.jpg",
+        "published_at": "2026-10-30T14:18:22.986Z"
+      }
     }
   ]
 }
